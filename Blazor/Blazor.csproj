@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="7.0.12" />
+    </ItemGroup>
+
+
+
+    <ItemGroup>
+      <ProjectReference Include="..\Domain\Domain.csproj" />
+      <ProjectReference Include="..\HttpClients\HttpClients.csproj" />
+    </ItemGroup>
+
+
+
+
+
+
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\icons\clear_funnel.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\icons\edit.gif" />
+      <_ContentIncludedByDefault Remove="wwwroot\icons\funnel.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\icons\View.png" />
+    </ItemGroup>
+
+
+
+</Project>

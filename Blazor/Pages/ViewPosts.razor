@@ -1,0 +1,112 @@
+@page "/ViewPosts"
+@using Domain.Models
+@using HttpClients.ClientInterfaces
+@inject IPostService PostService
+@inject NavigationManager NavMgr
+
+<h3>Posts</h3>
+
+<div class="filter-bar">
+    <div class="filters-container">
+        <img src="icons/@(_doShowFilters ? "clear_" : "")funnel.png" class="funnel" @onclick="@(() => _doShowFilters = !_doShowFilters)" alt="Funnel"/>
+        @if (_doShowFilters)
+        {
+
+
+	        <div class="filter">
+		        <label>Username:</label>
+		        <input type="text" @bind="_usernameFilter"/>
+	        </div>
+
+
+	        <div class="filter">
+		        <label>User id:</label>
+		        <input type="number" @bind="_userIdFilter"/>
+	        </div>
+
+            <div class="filter">
+                <label>Title contains:</label>
+                <input type="text" @bind="_titleContainsFilter"/>
+            </div>
+        }
+    </div>
+</div>
+
+<div>
+    <button @onclick="LoadPosts">Load</button>
+</div>
+
+@if (_posts == null)
+{
+
+}
+
+
+
+else if (!_posts.Any())
+{
+	<p>No Post
+		s to display</p>
+}
+
+else
+
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Title</th>
+            <th>View Post</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var post in _posts)
+        {
+            <tr>
+                <td>@post.Id</td>
+                <td>@post.Owner.Username</td>
+	            <td>@post.Title</td>
+
+
+	            @*download the image here*@
+	            <td>
+
+
+		            <img src="#" class="funnel" @onclick="@(() => NavMgr.NavigateTo($"/ViewOne/{post.Id}"))"/>
+	            </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+@if (!string.IsNullOrEmpty(_msg))
+{
+    <label style="color: red">@_msg</label>
+}
+
+@code {
+	/*why do i need doSHowFilters ----------- ask jakob*/
+    private IEnumerable<Post>? _posts;
+    private string _msg = "";
+    private bool _doShowFilters = false;
+    private string? _usernameFilter;
+    private int? _userIdFilter;
+    private string? _titleContainsFilter;
+
+
+
+    private async Task LoadPosts()
+    {
+        try
+        {
+            _posts = await PostService.GetAsync(_usernameFilter, _userIdFilter, _titleContainsFilter);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            _msg = e.Message;
+        }
+    }
+}

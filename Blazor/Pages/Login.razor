@@ -1,0 +1,86 @@
+@page "/Login"
+@using Blazor.Services
+@inject IAuthService AuthService
+@inject NavigationManager NavMgr
+
+<AuthorizeView>
+	<NotAuthorized>
+
+
+		<div class="card">
+			<h3>Log in</h3>
+
+			<div class="field">
+				<label>User name:</label>
+				<input type="text" @bind="_userName"/><br/><br/>
+			</div>
+
+
+			<div class="field">
+				<label>Password:</label>
+				<input type="password" @bind="_password"/><br/><br/>
+			</div>
+
+
+			@if (!string.IsNullOrEmpty(_errorLabel))
+			{
+				<div class="field">
+					<label style="color: red">
+						@_errorLabel
+					</label>
+				</div>
+			}
+
+
+			<div class="field">
+				<button class="loginbtn" @onclick="LoginAsync">Log in</button><br/><br/>
+			</div>
+			<div class="field">
+				<button class="loginbtn" title="Register" @onclick="RegisterAsync">Register <span class="oi oi-key"></span></button><br/><br/>
+			</div>
+		</div>
+
+
+		@*authorization ----- check on the website*@
+	</NotAuthorized>
+    <Authorized>
+        <div class="card">
+            <h3>Hello, @context.User.Identity.Name</h3>
+        </div>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    private string? _userName;
+    private string? _password;
+    private string? _errorLabel;
+
+    private async Task LoginAsync()
+    {
+        _errorLabel = "";
+        try
+        {
+            await AuthService.LoginAsync(_userName, _password);
+            NavMgr.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            _errorLabel = $"Error: {e.Message}";
+        }
+    }
+
+    private async Task RegisterAsync()
+    {
+        _errorLabel = "";
+        try
+        {
+            NavMgr.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            _errorLabel = $"Error: {e.Message}";
+        }
+    }
+}

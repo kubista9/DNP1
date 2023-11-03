@@ -1,0 +1,193 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/jakubkuka/Desktop/Assigment2/Blazor/Blazor.csproj": {}
+  },
+  "projects": {
+    "/Users/jakubkuka/Desktop/Assigment2/Blazor/Blazor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jakubkuka/Desktop/Assigment2/Blazor/Blazor.csproj",
+        "projectName": "Blazor",
+        "projectPath": "/Users/jakubkuka/Desktop/Assigment2/Blazor/Blazor.csproj",
+        "packagesPath": "/Users/jakubkuka/.nuget/packages/",
+        "outputPath": "/Users/jakubkuka/Desktop/Assigment2/Blazor/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jakubkuka/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/jakubkuka/Desktop/Assigment2/Domain/Domain.csproj": {
+                "projectPath": "/Users/jakubkuka/Desktop/Assigment2/Domain/Domain.csproj"
+              },
+              "/Users/jakubkuka/Desktop/Assigment2/HttpClients/HttpClients.csproj": {
+                "projectPath": "/Users/jakubkuka/Desktop/Assigment2/HttpClients/HttpClients.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jakubkuka/Desktop/Assigment2/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jakubkuka/Desktop/Assigment2/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/Users/jakubkuka/Desktop/Assigment2/Domain/Domain.csproj",
+        "packagesPath": "/Users/jakubkuka/.nuget/packages/",
+        "outputPath": "/Users/jakubkuka/Desktop/Assigment2/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jakubkuka/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[8.0.0-rc.2.23480.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jakubkuka/Desktop/Assigment2/HttpClients/HttpClients.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jakubkuka/Desktop/Assigment2/HttpClients/HttpClients.csproj",
+        "projectName": "HttpClients",
+        "projectPath": "/Users/jakubkuka/Desktop/Assigment2/HttpClients/HttpClients.csproj",
+        "packagesPath": "/Users/jakubkuka/.nuget/packages/",
+        "outputPath": "/Users/jakubkuka/Desktop/Assigment2/HttpClients/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jakubkuka/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/jakubkuka/Desktop/Assigment2/Domain/Domain.csproj": {
+                "projectPath": "/Users/jakubkuka/Desktop/Assigment2/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
