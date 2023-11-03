@@ -1,0 +1,73 @@
+{
+  "Users": [
+    {
+      "Id": 1,
+      "Username": "jakub",
+      "Password": "password",
+      "LoggedIn": null
+    },
+    {
+      "Id": 2,
+      "Username": "mato",
+      "Password": "pass",
+      "LoggedIn": null
+    }
+  ],
+  "Posts": [
+    {
+      "Title": "test-post",
+      "Body": "Lorem ipsum dolor sit amet",
+      "Id": 1,
+      "Owner": {
+        "Id": 1,
+        "Username": "jakub",
+        "Password": "password",
+        "LoggedIn": null
+      }
+    },
+    {
+      "Title": "post",
+      "Body": "whateverDude",
+      "Id": 2,
+      "Owner": {
+        "Id": 1,
+        "Username": "jakub",
+        "Password": "password",
+        "LoggedIn": null
+      }
+    },
+    {
+      "Title": "i love blazor",
+      "Body": "please ",
+      "Id": 3,
+      "Owner": {
+        "Id": 1,
+        "Username": "jakub",
+        "Password": "password",
+        "LoggedIn": null
+      }
+    },
+    {
+      "Title": "whatever",
+      "Body": "awgaeraegae",
+      "Id": 4,
+      "Owner": {
+        "Id": 1,
+        "Username": "jakub",
+        "Password": "password",
+        "LoggedIn": null
+      }
+    },
+    {
+      "Title": "erabaerb",
+      "Body": "awrbrba",
+      "Id": 5,
+      "Owner": {
+        "Id": 2,
+        "Username": "mato",
+        "Password": "pass",
+        "LoggedIn": null
+      }
+    }
+  ]
+}
